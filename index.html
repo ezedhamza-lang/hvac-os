@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HVAC OS — منصة المهندس الشاملة للتكييف والطاقة</title>
+<meta name="description" content="برنامج هندسي كامل للتكييف والطاقة: أحمال، قنوات، هيدروليك، عزل، شمسي، PV، عروض وفواتير — عربي/فرنسي/إنجليزي، يعمل بدون إنترنت.">
+<style>
+:root{
+  --teal:#0D9488; --teal-d:#0F766E; --teal-x:#134E4A; --teal-l:#F0FDFA;
+  --ink:#0F172A; --mut:#475569; --line:#E2E8F0; --bg:#F6F8FB; --card:#fff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"Segoe UI",Tahoma,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;background:#ffffffee;backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:9}
+header .wrap{display:flex;align-items:center;gap:14px;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;color:var(--teal-x)}
+.logo img{width:38px;height:38px;border-radius:9px}
+nav{margin-inline-start:auto;display:flex;gap:8px;align-items:center}
+.lang{border:1.5px solid var(--line);border-radius:8px;padding:5px 10px;background:#fff;color:var(--ink);cursor:pointer;font-weight:600}
+.btn{display:inline-block;background:var(--teal);color:#fff;text-decoration:none;font-weight:700;border-radius:10px;padding:12px 26px;transition:.2s}
+.btn:hover{background:var(--teal-d);transform:translateY(-2px);box-shadow:0 8px 20px #0d948833}
+.btn.ghost{background:#fff;color:var(--teal-d);border:1.5px solid var(--teal)}
+.btn.ghost:hover{background:var(--teal-l)}
+.hero{padding:70px 0 50px;text-align:center}
+.hero h1{font-size:clamp(28px,5vw,46px);color:var(--teal-x);line-height:1.35}
+.hero p{color:var(--mut);font-size:clamp(15px,2.2vw,19px);max-width:720px;margin:16px auto 30px}
+.cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.badges{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+.badge{background:var(--teal-l);color:var(--teal-d);border:1px solid #99f6e4;border-radius:999px;padding:6px 16px;font-size:13px;font-weight:700}
+section{padding:56px 0}
+h2{font-size:26px;color:var(--teal-x);margin-bottom:8px;text-align:center}
+.sub{color:var(--mut);text-align:center;margin-bottom:34px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;transition:.2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 12px 28px #0f172a12;border-color:var(--teal)}
+.card b{display:block;color:var(--teal-d);margin-bottom:6px;font-size:16px}
+.card span{color:var(--mut);font-size:14px}
+.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+.shots img{width:100%;border-radius:12px;border:1px solid var(--line);display:block}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;text-align:center}
+.stat{background:var(--teal-x);color:#fff;border-radius:14px;padding:22px 10px}
+.stat b{font-size:26px;display:block}
+.stat span{font-size:13px;opacity:.85}
+.price{max-width:520px;margin:0 auto;text-align:center;background:#fff;border:2px solid var(--teal);border-radius:18px;padding:34px}
+.price .n{font-size:40px;font-weight:800;color:var(--teal-d)}
+.faq{max-width:760px;margin:0 auto}
+details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:700;color:var(--teal-x)}
+footer{background:var(--teal-x);color:#cbd5e1;text-align:center;padding:34px 20px;font-size:14px}
+footer a{color:#5eead4;text-decoration:none}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="logo"><img src="assets/logo.png" alt="HVAC OS"> HVAC OS</div>
+  <nav>
+    <select class="lang" id="langSel" aria-label="language">
+      <option value="ar">العربية</option><option value="fr">Français</option><option value="en">English</option>
+    </select>
+    <a class="btn" id="dlTop" href="https://github.com/ezedhamza-lang/hvac-os/releases/latest">تحميل</a>
+  </nav>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <h1 id="t1">منصة المهندس الشاملة للتكييف والطاقة</h1>
+  <p id="t2">17 وحدة هندسية وتجارية: أحمال ASHRAE، قنوات، هيدروليك، عزل، طاقة شمسية وPV، تدقيق طاقي، عروض وفواتير PDF — بثلاث لغات و12 سوقًا، <b>يعمل بالكامل بدون إنترنت</b>.</p>
+  <div class="cta">
+    <a class="btn" id="dlMain" href="https://github.com/ezedhamza-lang/hvac-os/releases/latest">⬇ تحميل النسخة v1.2.0</a>
+    <a class="btn ghost" id="waBtn" href="https://wa.me/">💬 واتساب للطلب</a>
+  </div>
+  <div class="badges">
+    <span class="badge" id="b1">✅ دقة مثبتة على حالات منشورة</span>
+    <span class="badge" id="b2">🔒 ترخيص أوفلاين — بلا إنترنت</span>
+    <span class="badge" id="b3">🌐 عربي · français · english</span>
+    <span class="badge" id="b4">🧮 18/18 بوابة اختبار</span>
+  </div>
+</div></div>
+
+<section><div class="wrap">
+  <h2 id="f0">الوحدات</h2><p class="sub" id="f0s">كل ما يحتاجه مهندس التكييف والطاقة في نافذة واحدة</p>
+  <div class="grid">
+    <div class="card"><b id="f1t">أحمال التبريد والتدفئة</b><span id="f1s">ASHRAE CLTD بـ 12 مكوّنًا + حاسبة تهوية 62.1 مدمجة</span></div>
+    <div class="card"><b id="f2t">القنوات والمواسير</b><span id="f2s">Colebrook تكراري، Darcy-Weisbach، خزان تمدد، مضخات</span></div>
+    <div class="card"><b id="f3t">العزل وجدواه</b><span id="f3s">معامل U حسب ISO 6946 + فحص تكاثف + سمك أمثل واسترداد</span></div>
+    <div class="card"><b id="f4t">الطاقة الشمسية وPV</b><span id="f4s">سخانات شمسية، ألواح، بطاريات، إنفرتر، CO₂</span></div>
+    <div class="card"><b id="f5t">التدقيق الطاقي</b><span id="f5s">تحليل 12 فاتورة يدويًا أو استيراد Excel + عتبات خليجية</span></div>
+    <div class="card"><b id="f6t">العروض والفواتير</b><span id="f6s">ضريبة السوق، 14 عملة، تصدير PDF عربي احترافي، CRM وصيانة</span></div>
+  </div>
+</div></section>
+
+<section style="background:#fff;border-block:1px solid var(--line)"><div class="wrap">
+  <h2 id="g0">بالصور من داخل البرنامج</h2>
+  <div class="shots">
+    <img src="assets/01_dashboard.png" alt="dashboard" loading="lazy">
+    <img src="assets/02_cooling_load.png" alt="cooling load" loading="lazy">
+    <img src="assets/04_duct_sizing.png" alt="ducts" loading="lazy">
+    <img src="assets/05_psychrometrics.png" alt="psychrometrics" loading="lazy">
+    <img src="assets/08_quotes.png" alt="quotes" loading="lazy">
+    <img src="assets/09_reports.png" alt="reports" loading="lazy">
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2 id="v0">دقة بالأرقام — لا بالشعارات</h2><p class="sub" id="v0s">نتائج البرنامج مقابل حالات هندسية منشورة علميًا</p>
+  <div class="stats">
+    <div class="stat"><b>0.1%</b><span id="v1">فرق عن HAP — مسجد دهوك (520.5 مقابل 519.9 kW)</span></div>
+    <div class="stat"><b>2.5%</b><span id="v2">محطة PV دبي 100kWp مقابل PVsyst</span></div>
+    <div class="stat"><b>29/29</b><span id="v3">بوابة التحقق الهندسي الذهبي</span></div>
+    <div class="stat"><b>12</b><span id="v4">سوقًا خليجيًا وشمال أفريقي</span></div>
+  </div>
+</div></section>
+
+<section style="background:#fff;border-block:1px solid var(--line)"><div class="wrap">
+  <h2 id="p0">السعر</h2>
+  <div class="price">
+    <div class="n" id="p1">رخصة دائمة</div>
+    <p id="p2">تفعيل لجهازك مدى الحياة · تحديثات · دعم واتساب<br>الدفع: تحويل بريدي/بنكي — والطلب عبر واتساب</p>
+    <p style="margin:14px 0"><a class="btn" id="dlPrice" href="https://github.com/ezedhamza-lang/hvac-os/releases/latest">⬇ جرّب 15 يومًا مجانًا</a></p>
+    <small id="p3">لا حاجة لإنترنت للتفعيل أو التشغيل</small>
+  </div>
+</div></section>
+
+<section><div class="wrap faq">
+  <h2 id="q0">أسئلة شائعة</h2>
+  <details><summary id="q1t">هل يعمل بدون إنترنت؟</summary><p id="q1s">نعم — كل الحسابات والتراخيص محلية 100%.</p></details>
+  <details><summary id="q2t">ظهر تحذير Windows عند التشغيل؟</summary><p id="q2s">اضغط «معلومات إضافية» ثم «تشغيل على أي حال» — طبيعي للبرامج غير الموقعة، وثبّت من المصادر الموثوقة فقط.</p></details>
+  <details><summary id="q3t">كيف أفعّل الرخصة؟</summary><p id="q3s">أرسل «رمز الجهاز» الظاهر في نافذة التفعيل إلى البائع عبر واتساب، ويصلك مفتاح مربوط بجهازك.</p></details>
+  <details><summary id="q4t">أين تُحفظ بياناتي؟</summary><p id="q4s">على جهازك فقط في ‎%LOCALAPPDATA%\HVAC_OS — مع نسخ احتياطي تلقائي.</p></details>
+</div></section>
+
+<footer><div class="wrap">
+  HVAC OS © 2026 · <a id="waFoot" href="https://wa.me/">واتساب</a> ·
+  <a href="https://github.com/ezedhamza-lang/hvac-os/releases/latest">التحميلات</a>
+  <p id="ft" style="margin-top:8px;opacity:.7">الأرقام الهندسية للمراجعة — المسؤولية النهائية لمهندس مرخّص</p>
+</div></footer>
+
+<script>
+const T={
+ ar:{},
+ fr:{t1:"La plateforme complète de l'ingénieur CVC & énergie",
+     t2:"17 modules : charges ASHRAE, gaines, hydraulique, isolation, solaire & PV, audit énergétique, devis et factures PDF — trilingue, 12 marchés, 100% hors ligne.",
+     dlTop:"Télécharger",dlMain:"⬇ Télécharger v1.2.0",waBtn:"💬 Commander via WhatsApp",
+     b1:"✅ Précision validée sur cas publiés",b2:"🔒 Licence hors ligne",b3:"🌐 arabe · français · anglais",b4:"🧮 18/18 tests validés",
+     f0:"Modules",f0s:"Tout ce qu'un ingénieur CVC doit faire, dans une seule fenêtre",
+     f1t:"Charges froid/chaud",f1s:"ASHRAE CLTD 12 composants + ventilation 62.1 intégrée",
+     f2t:"Gaines & tuyauterie",f2s:"Colebrook itératif, Darcy-Weisbach, vase d'expansion, pompes",
+     f3t:"Isolation & rentabilité",f3s:"U selon ISO 6946 + condensation + épaisseur optimale et ROI",
+     f4t:"Solaire thermique & PV",f4s:"Chauffe-eau solaire, panneaux, batteries, onduleur, CO₂",
+     f5t:"Audit énergétique",f5s:"12 factures manuelles ou import Excel + seuils Golfe",
+     f6t:"Devis, factures, CRM",f6s:"TVA marché, 14 devises, PDF professionnel, maintenance",
+     g0:"Captures du logiciel",
+     v0:"Des chiffres, pas des slogans",v0s:"Résultats vs cas scientifiques publiés",
+     v1:"écart vs HAP — mosquée Duhok (520,5 vs 519,9 kW)",v2:"centrale PV Dubaï 100 kWp vs PVsyst",
+     v3:"validation ingénierie dorée",v4:"marchés Golfe & Afrique du Nord",
+     p0:"Tarif",p1:"Licence à vie",p2:"Activation à vie sur votre machine · mises à jour · support WhatsApp<br>Paiement : virement — commande via WhatsApp",
+     dlPrice:"⬇ Essai gratuit 15 jours",p3:"Aucune connexion requise",
+     q0:"Questions fréquentes",
+     q1t:"Fonctionne-t-il hors ligne ?",q1s:"Oui — calculs et licences 100% locaux.",
+     q2t:"Avertissement Windows ?",q2s:"« Plus d'informations » puis « Exécuter quand même » — normal pour un logiciel non signé.",
+     q3t:"Comment activer ?",q3s:"Envoyez le « code machine » au vendeur via WhatsApp, recevez votre clé liée à votre poste.",
+     q4t:"Où sont mes données ?",q4s:"Sur votre machine uniquement (%LOCALAPPDATA%\\HVAC_OS), sauvegardes automatiques.",
+     waFoot:"WhatsApp",ft:"Les chiffres restent soumis à vérification par un ingénieur agréé."},
+ en:{t1:"The Complete HVAC & Energy Engineering Platform",
+     t2:"17 modules: ASHRAE loads, ducts, hydraulics, insulation, solar & PV, energy audits, PDF quotes & invoices — trilingual, 12 markets, fully offline.",
+     dlTop:"Download",dlMain:"⬇ Download v1.2.0",waBtn:"💬 Order via WhatsApp",
+     b1:"✅ Accuracy validated on published cases",b2:"🔒 Offline licensing",b3:"🌐 Arabic · French · English",b4:"🧮 18/18 test gates green",
+     f0:"Modules",f0s:"Everything an HVAC engineer needs, in one window",
+     f1t:"Cooling & heating loads",f1s:"ASHRAE CLTD with 12 components + built-in 62.1 ventilation",
+     f2t:"Ducts & pipes",f2s:"Iterative Colebrook, Darcy-Weisbach, expansion tank, pumps",
+     f3t:"Insulation & payback",f3s:"ISO 6946 U-value + condensation check + optimal thickness & ROI",
+     f4t:"Solar thermal & PV",f4s:"Solar water heaters, panels, batteries, inverter, CO₂",
+     f5t:"Energy audit",f5s:"12 bills manual or Excel import + Gulf-tuned benchmarks",
+     f6t:"Quotes, invoices, CRM",f6s:"Market VAT, 14 currencies, pro Arabic PDF, maintenance",
+     g0:"Inside the app",
+     v0:"Numbers, not slogans",v0s:"Results vs peer-reviewed published cases",
+     v1:"gap vs HAP — Duhok mosque (520.5 vs 519.9 kW)",v2:"Dubai 100 kWp PV plant vs PVsyst",
+     v3:"golden engineering validation",v4:"Gulf & North Africa markets",
+     p0:"Pricing",p1:"Lifetime license",p2:"One-time activation for your machine · updates · WhatsApp support<br>Payment: bank/mobile transfer — order via WhatsApp",
+     dlPrice:"⬇ Free 15-day trial",p3:"No internet needed",
+     q0:"FAQ",
+     q1t:"Does it work offline?",q1s:"Yes — all calculations and licensing are 100% local.",
+     q2t:"Windows warning?",q2s:"Click “More info” then “Run anyway” — normal for unsigned software.",
+     q3t:"How to activate?",q3s:"Send the on-screen machine code to the vendor via WhatsApp; receive your device-bound key.",
+     q4t:"Where is my data?",q4s:"Only on your machine (%LOCALAPPDATA%\\HVAC_OS), with automatic backups.",
+     waFoot:"WhatsApp",ft:"Engineering figures remain subject to a licensed engineer's review."}
+};
+const sel=document.getElementById('langSel');
+function apply(l){
+  document.documentElement.lang=l;
+  document.documentElement.dir=(l==='ar')?'rtl':'ltr';
+  for(const [k,v] of Object.entries(T[l]||{})){const e=document.getElementById(k);if(e)e.textContent=v;}
+  if(l==='ar'){/* restore arabic defaults from DOM snapshot */}
+}
+let orig=null;
+sel.onchange=()=>{const l=sel.value;
+  if(!orig){orig={};document.querySelectorAll('[id]').forEach(e=>orig[e.id]=e.textContent);}
+  if(l==='ar'){for(const [k,v] of Object.entries(orig)){const e=document.getElementById(k);if(e)e.textContent=v;}}
+  else apply(l);
+};
+</script>
+</body>
+</html>
