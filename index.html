@@ -5,13 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>HVAC OS — منصة المهندس الشاملة للتكييف والطاقة</title>
 <meta name="description" content="برنامج هندسي كامل للتكييف والطاقة: أحمال، قنوات، هيدروليك، عزل، شمسي، PV، عروض وفواتير — عربي/فرنسي/إنجليزي، يعمل بدون إنترنت.">
+<!-- Open Graph / Facebook preview -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="HVAC OS">
+<meta property="og:title" content="HVAC OS — منصة المهندس الشاملة للتكييف والطاقة">
+<meta property="og:description" content="17 وحدة هندسية بثلاث لغات، يعمل بدون إنترنت. جرّبه 15 يومًا مجانًا.">
+<meta property="og:image" content="https://ezedhamza-lang.github.io/hvac-os/assets/og.png">
+<meta property="og:url" content="https://ezedhamza-lang.github.io/hvac-os/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --teal:#0D9488; --teal-d:#0F766E; --teal-x:#134E4A; --teal-l:#F0FDFA;
   --ink:#0F172A; --mut:#475569; --line:#E2E8F0; --bg:#F6F8FB; --card:#fff;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:"Segoe UI",Tahoma,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
+body{font-family:"IBM Plex Sans Arabic","Segoe UI",Tahoma,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
 .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
 header{position:sticky;top:0;background:#ffffffee;backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:9}
 header .wrap{display:flex;align-items:center;gap:14px;height:64px}
@@ -69,6 +80,7 @@ footer a{color:#5eead4;text-decoration:none}
   <div class="cta">
     <a class="btn" id="dlMain" href="https://github.com/ezedhamza-lang/hvac-os/releases/latest">⬇ تحميل النسخة v1.2.0</a>
     <a class="btn ghost" id="waBtn" href="https://wa.me/21696035997">💬 واتساب للطلب</a>
+    <a class="btn ghost" id="emailBtn" href="mailto:ezedhamza@gmail.com">✉ البريد</a>
   </div>
   <div class="badges">
     <span class="badge" id="b1">✅ دقة مثبتة على حالات منشورة</span>
@@ -135,7 +147,12 @@ footer a{color:#5eead4;text-decoration:none}
 
 <footer><div class="wrap">
   HVAC OS © 2026 · <a id="waFoot" href="https://wa.me/21696035997">واتساب</a> ·
+  <a href="mailto:ezedhamza@gmail.com">البريد</a> ·
   <a href="https://github.com/ezedhamza-lang/hvac-os/releases/latest">التحميلات</a>
+  <!-- ملاحظة لصاحب المشروع: عند نشر موقعك الشخصي استبدل رابط GitHub برابطه -->
+  <p style="margin-top:10px;opacity:.85">جزء من منظومة
+    <a href="https://github.com/ezedhamza-lang" style="color:#5EEAD4;font-weight:700">Hamza&nbsp;Ezzeddine</a>
+    — Educator · Engineer · Digital Builder</p>
   <p id="ft" style="margin-top:8px;opacity:.7">الأرقام الهندسية للمراجعة — المسؤولية النهائية لمهندس مرخّص</p>
 </div></footer>
 
@@ -144,7 +161,7 @@ const T={
  ar:{},
  fr:{t1:"La plateforme complète de l'ingénieur CVC & énergie",
      t2:"17 modules : charges ASHRAE, gaines, hydraulique, isolation, solaire & PV, audit énergétique, devis et factures PDF — trilingue, 12 marchés, 100% hors ligne.",
-     dlTop:"Télécharger",dlMain:"⬇ Télécharger v1.2.0",waBtn:"💬 Commander via WhatsApp",
+     dlTop:"Télécharger",dlMain:"⬇ Télécharger v1.2.0",waBtn:"💬 Commander via WhatsApp",emailBtn:"✉ E-mail",
      b1:"✅ Précision validée sur cas publiés",b2:"🔒 Licence hors ligne",b3:"🌐 arabe · français · anglais",b4:"🧮 18/18 tests validés",
      f0:"Modules",f0s:"Tout ce qu'un ingénieur CVC doit faire, dans une seule fenêtre",
      f1t:"Charges froid/chaud",f1s:"ASHRAE CLTD 12 composants + ventilation 62.1 intégrée",
@@ -167,7 +184,7 @@ const T={
      waFoot:"WhatsApp",ft:"Les chiffres restent soumis à vérification par un ingénieur agréé."},
  en:{t1:"The Complete HVAC & Energy Engineering Platform",
      t2:"17 modules: ASHRAE loads, ducts, hydraulics, insulation, solar & PV, energy audits, PDF quotes & invoices — trilingual, 12 markets, fully offline.",
-     dlTop:"Download",dlMain:"⬇ Download v1.2.0",waBtn:"💬 Order via WhatsApp",
+     dlTop:"Download",dlMain:"⬇ Download v1.2.0",waBtn:"💬 Order via WhatsApp",emailBtn:"✉ E-mail",
      b1:"✅ Accuracy validated on published cases",b2:"🔒 Offline licensing",b3:"🌐 Arabic · French · English",b4:"🧮 18/18 test gates green",
      f0:"Modules",f0s:"Everything an HVAC engineer needs, in one window",
      f1t:"Cooling & heating loads",f1s:"ASHRAE CLTD with 12 components + built-in 62.1 ventilation",
